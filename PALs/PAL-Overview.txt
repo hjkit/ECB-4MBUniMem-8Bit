@@ -1,0 +1,9 @@
+PAL-U7-22V10-4MB-512K-8K-4K-Common.pld
+		4MB RAM/FLASH fuer CP/M+ oder CP/M3ROM mit CPU/S oder CPU85SC
+		2 Sockel 512K
+		8K Common-Bereich, VIDEO80
+		1 MByte Dekodierung, Adr. 00000-FFFFF
+
+PAL-U3-16V8-4MB-Common.pld
+		Extension PAL zur Common-Steuerung der 4MB Speicherkarte
+

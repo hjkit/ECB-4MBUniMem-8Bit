@@ -1,0 +1,32 @@
+GAL22V10
+22V10
+
+;/*   1   2   3   4   5   6   7   8     9  10    11  12 */
+A12 A13 A14 A15 A16 A17 A18 A19 MREQ BLANK BOOT GND
+
+;/* 13    14  15  16  17  18  19  20  21  22   23  24 */
+COM CS1 CS2 CS3 CS4 CS5 CS6 CS7 CS8 A16Out DATEN VCC
+
+/CS1     =  /A19*   /A15*               /MREQ* BOOT 
+         +  /A19*   A15*/A14*          /MREQ 
+         +  /A19*   A15* A14*/A13*     /MREQ
+         +          A15* A14* A13*/A12*/MREQ* BLANK
+         +          A15* A14* A13* A12*/MREQ
+
+;/CS2    =  A19
+
+/CS2    =  A19*     /A15*               /MREQ* BOOT
+        +  A19*      A15*/A14*          /MREQ
+        +  A19*      A15* A14*/A13*     /MREQ
+
+/DATEN = /CS1 + /CS2
+
+DESCRIPTION
+Date 240226
+8K Common-Bereich, VIDEO80
+externe COMMON Logik
+;
+8 Sockel 512K
+4 MByte Dekodierung, Adr. 00000-FFFFF
+Address Decoder for 4MB Uni Mem
+4M RAM/EPROM fuer CP/M+ oder CP/M3ROM mit CPU/S oder CPU85SC
